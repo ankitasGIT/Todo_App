@@ -2,8 +2,6 @@ import express from "express";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 
-
-
 const app = express();
 
 app.use(cors({
@@ -26,7 +24,13 @@ app.use(express.static("public"))
 app.use(cookieParser())
 
 
-import {userRouter} from "./Routes/user.routes.js";
+import userRouter from "../Src/Routes/user.routes.js";
 app.use("/api/v1/users", userRouter);
 
+import todoRouter from "../Src/Routes/todo.routes.js";
+app.use("/api/v1/todos", todoRouter);
+
 export {app};
+
+
+

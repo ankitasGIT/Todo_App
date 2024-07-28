@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import connectDb from "./Db/dbconnect.js";
 
 dotenv.config({
-    path: '/.env'
+    path: './env'
 })
 
 
